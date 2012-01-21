@@ -1,3 +1,5 @@
+package sgnuplot
+
 import java.io._
 
 object Util {

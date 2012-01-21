@@ -1,3 +1,5 @@
+package sgnuplot
+
 import Util._
 
 object Gnuplot {
@@ -64,7 +66,7 @@ object Gnuplot {
     def yrange(r:Range):Plot = plot.copy(yrange = "[%d:%d]" format (r.head, r.last))
     def line(fn: Line => Line):Plot = plot.copy(lines = lines :+ fn(new Line))
     def custom(s:Seq[String]):Plot = plot.copy(custom = s)
-    /** Simply adds provieded line to the end of the script, right before "plot" call */
+    /** Simply adds provided line to the end of the script, right before "plot" call */
     def custom(s:String):Plot = plot.copy(custom = custom :+ s)
     def plot {
       val dataFile = create_file(data.map(_.mkString("  ")))
