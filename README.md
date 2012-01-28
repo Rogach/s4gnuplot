@@ -10,7 +10,15 @@ Simple scala wrapper for Gnuplot, popular plotting utility.
 
 Tested with gnuplot 4.4
 
-# Sample usage:
+# Usage:
+
+I do not upload pre-built jars since the project is so small :)
+But you can just copy-paste two source files into your project, or you can use a git dependency in your sbt's Build.scala:
+
+    lazy val root = Project(id = "hello", base = file(".")) dependsOn
+                    (RootProject( uri("git://github.com/Rogach/s4gnuplot")))
+
+# Samples:
 
     import sgnuplot.Gnuplot
         
