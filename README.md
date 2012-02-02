@@ -13,14 +13,14 @@ Tested with gnuplot 4.4
 # Usage:
 
 I do not upload pre-built jars since the project is so small :)
-But you can just copy-paste two source files into your project, or you can use a git dependency in your sbt's Build.scala:
+But you can just copy-paste s4gnuplot source files into your project, or you can use a git dependency in your sbt's Build.scala:
 
     lazy val root = Project(id = "hello", base = file(".")) dependsOn
                     (RootProject( uri("git://github.com/Rogach/s4gnuplot")))
 
 # Samples:
 
-    import sgnuplot.Gnuplot
+    import s4gnuplot.Gnuplot
         
     // simple plot - just a straight line
     Gnuplot.newPlot
