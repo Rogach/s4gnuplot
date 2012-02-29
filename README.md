@@ -12,11 +12,13 @@ Tested with gnuplot 4.4
 
 # Usage:
 
-I do not upload pre-built jars since the project is so small :)
-But you can just copy-paste s4gnuplot source files into your project, or you can use a git dependency in your sbt's Build.scala:
+Add the following lines to your build.sbt:
 
-    lazy val root = Project(id = "hello", base = file(".")) dependsOn
-                    (RootProject( uri("git://github.com/Rogach/s4gnuplot")))
+    resolvers += "s4gnuplot gihub maven repo" at "https://github.com/Rogach/s4gnuplot/raw/master/maven/"
+
+    libraryDependencies += "org.rogach" % "s4gnuplot" % "0.2"
+
+Or you can just manually download the project jar from https://github.com/Rogach/s4gnuplot/raw/master/maven/org/rogach/s4gnuplot/0.2/s4gnuplot-0.2.jar
 
 # Samples:
 
