@@ -14,11 +14,11 @@ Tested with gnuplot 4.4
 
 Add the following lines to your build.sbt:
 
-    resolvers += "s4gnuplot gihub maven repo" at "https://github.com/Rogach/s4gnuplot/raw/master/maven/"
+    resolvers += "s4gnuplot gihub maven repo" at "https://github.com/Rogach/org.rogach/raw/master/"
 
     libraryDependencies += "org.rogach" % "s4gnuplot" % "0.2"
 
-Or you can just manually download the project jar from https://github.com/Rogach/s4gnuplot/raw/master/maven/org/rogach/s4gnuplot/0.2/s4gnuplot-0.2.jar
+Or you can just manually download the project jar from https://github.com/Rogach/org.rogach/raw/master/org/rogach/s4gnuplot/0.2/s4gnuplot-0.2.jar
 
 # Samples:
 
