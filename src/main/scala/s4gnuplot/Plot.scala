@@ -31,7 +31,7 @@ case class Plot(data:Seq[Seq[Double]] = Seq(),
   def custom(s:Seq[String]):Plot = plot.copy(custom = s)
   /** Simply adds provided line to the end of the script, right before "plot" call */
   def custom(s:String):Plot = plot.copy(custom = custom :+ s)
-  def plot {
+  def plot() {
     Gnuplot.plot(plot)
-  } 
+  }
 }

@@ -17,13 +17,13 @@ object Gnuplot {
   }
 
   /** cleans up the files in /tmp */
-  def clean_up {
+  def clean_up() {
     import sys.process._;
     Seq("bash", "-c", "rm /tmp/gnuplot_*") !
   }
 
   /** Execute gnuplot on provided plot object. */
-  def plot (plot:Plot) {
+  def plot(plot:Plot) {
     import plot._;
     val dataFile = create_file(data.map(_.mkString("  ")))
     val scriptFile = create_file(
@@ -44,6 +44,6 @@ object Gnuplot {
   }
 
   /** Creates a default plot builder */
-  def newPlot = new Plot 
-  
+  def newPlot = new Plot
+
 }
